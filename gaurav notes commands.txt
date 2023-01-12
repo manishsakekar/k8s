@@ -1,0 +1,22 @@
+
+for creating pod 
+kubectl run firstpod  --generator=run-pod/v1  --image=coolgourav147/nginx-custom
+
+to list pod
+kubectl get pods   
+
+to list replicationcontrol
+
+kubectl get rc
+
+
+....................................
+to get information of things
+
+kubectl explain pods
+....................................
+
+to delete pods
+
+kubectl delete pod podname
+......................................
