@@ -27,5 +27,3 @@ spec:
     - name: city
 
       valu: kolhapur
-    
-     args: ["sleep" , "100"]

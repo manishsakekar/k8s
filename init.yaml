@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Pod
+metadata:
+  name: manish
+  labels2: sakekar
+  labels3: shantanu
+#namespace : "default"
+spec:
+containers:
+      - name: myfirstcontainer
+        image: ubuntu
+        env:
+          - name: myname
+            value: manish
+          - name : city
+            value: pune
+       
+        containers:
+        - name : secondcontainer
+          image : ubuntu
+initContainers:
+  - name: initContainer
+    valu : manish
+  - name : city
+    value : kolhapur
+containerPort: 80
+    

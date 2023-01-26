@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: myreplica
+spec:
+  replicas: 2
+  selector:
+    myname: manish
+  template:
+    metadata:
+      name: myapp
+      labels:
+        app: manish
+    spec:
+      containers:
+        - name:  coo
+          image: ubuntu
+          command:
+            [ "/bin/bash", "while true; do echo Hello-Manish; sleep 5 ; done"]
+
+
