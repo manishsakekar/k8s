@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: shantanu
+spec:
+  replicas: 5
+  selector:
+    myname: manish
+  template:
+    metadata:
+      name: testpod
+      labels:
+        myname: manish
+    spec:
+      containers:
+        - name: c22
+          image: ubuntu
+          ports:
+            - containerPort: 8080

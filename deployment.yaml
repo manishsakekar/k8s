@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: firstdeployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: manish
+  template:
+    metadata:
+      labels:
+        name: shantanu
+        dept : chemical
+    spec:
+      containers:
+      - name: manish
+        image: ubuntu
+        

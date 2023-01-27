@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: testpod
+  labels:
+    name: mypod
+spec:
+  containers:
+  - name: manish
+    image: ubuntu
+    command:["/bin/bash", "-c", "while true; do echo "Hello-manish: sleep 5 ; done"]
+  - name: shantanu
+    image: httpd
+    ports:
+      - containerPort: 80
+
+#communication between two containers

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: shantanu
+spec:
+  replicas: 2
+  selector:
+    myname: manish
+  template:
+    metadata:
+      name: dadya
+      labels:
+        myname: manish
+    spec:
+      containers:
+        - name: c33
+          image: ubuntu
+          ports:
+            - containerPort: 8080
